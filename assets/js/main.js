@@ -82,12 +82,15 @@
    * Toggle .header-scrolled class to #header when page is scrolled
    */
   let selectHeader = select('#header')
+  let selectText = select('.navbar')
   if (selectHeader) {
     const headerScrolled = () => {
       if (window.scrollY > 100) {
         selectHeader.classList.add('header-scrolled')
+        selectText.classList.add('navbar-scrolled')
       } else {
         selectHeader.classList.remove('header-scrolled')
+        selectText.classList.remove('navbar-scrolled')
       }
     }
     window.addEventListener('load', headerScrolled)
